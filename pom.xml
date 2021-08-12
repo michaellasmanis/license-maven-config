@@ -23,7 +23,7 @@
     <artifactId>license-maven-config</artifactId>
     <version>${revision}.${changelist}</version>
 
-    <packaging>pom</packaging>
+    <packaging>jar</packaging>
 
     <name>Maven License Plugin Configuration</name>
     <description>Configuration and template files for com.mycila:license-maven-plugin</description>
@@ -32,10 +32,7 @@
     <properties>
         <revision>0.0</revision>
         <changelist>0-SNAPSHOT</changelist>
-
         <repository.name>license-maven-config</repository.name>
-
-        <!-- plugins/extensions -->
         <tiles-maven.version>2.19</tiles-maven.version>
         <lasmanis-maven-tiles.version>0.0.105</lasmanis-maven-tiles.version>
     </properties>
@@ -43,40 +40,32 @@
     <url>${baseurl}</url>
 
     <scm>
-        <connection>${scmBase.connection}/${project.artifactId}</connection>
-        <url>${scmBase.url}/${project.artifactId}</url>
-        <developerConnection>${scmBase.developerConnection}/${project.artifactId}</developerConnection>
+        <connection>${scmBase.connection}</connection>
+        <url>${scmBase.url}</url>
+        <developerConnection>${scmBase.developerConnection}</developerConnection>
         <tag>${scmBase.tag}</tag>
     </scm>
 
     <distributionManagement>
         <site>
             <id>scm-publish</id>
-            <url>${scmBase.connection}/${project.artifactId}</url>
+            <url>${scmBase.connection}</url>
         </site>
     </distributionManagement>
 
     <build>
-        <pluginManagement>
-            <plugins>
-                <plugin>
-                    <groupId>io.repaint.maven</groupId>
-                    <artifactId>tiles-maven-plugin</artifactId>
-                    <version>${tiles-maven.version}</version>
-                    <extensions>true</extensions>
-                    <configuration>
-                        <tiles>
-                            <tile>com.lasmanis.maven.tiles:core-set-ossrh:${lasmanis-maven-tiles.version}</tile>
-                        </tiles>
-                    </configuration>
-                </plugin>
-            </plugins>
-        </pluginManagement>
-
         <plugins>
             <plugin>
                 <groupId>io.repaint.maven</groupId>
                 <artifactId>tiles-maven-plugin</artifactId>
+                <version>${tiles-maven.version}</version>
+                <extensions>true</extensions>
+                <configuration>
+                    <tiles>
+                        <tile>com.lasmanis.maven.tiles:core-set-ossrh:${lasmanis-maven-tiles.version}</tile>
+                        <tile>com.lasmanis.maven.tiles:java-set:${lasmanis-maven-tiles.version}</tile>
+                    </tiles>
+                </configuration>
             </plugin>
         </plugins>
     </build>
