@@ -14,40 +14,40 @@ This project contains license templates for the [License Maven Plugin](http://co
 
 Example configuration for the License Maven Plugin in the (parent) pom of the project:
 
-<project>
-    <properties>
-        <owner.name>Michael Lasmanis</owner.name>
-        <owner.email>michael@lasmanis.com</owner.email>
-    </properties>
+    <project>
+        <properties>
+            <owner.name>Michael Lasmanis</owner.name>
+            <owner.email>michael@lasmanis.com</owner.email>
+        </properties>
 
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>com.mycila</groupId>
-                <artifactId>license-maven-plugin</artifactId>
-                <dependencies>
-                    <dependency>
-                        <groupId>com.lasmanis.maven</groupId>
-                        <artifactId>license-maven-config</artifactId>
-                        <version>0.0.1</version>
-                    </dependency>
-                </dependencies>
+        <build>
+            <plugins>
+                <plugin>
+                    <groupId>com.mycila</groupId>
+                    <artifactId>license-maven-plugin</artifactId>
+                    <dependencies>
+                        <dependency>
+                            <groupId>com.lasmanis.maven</groupId>
+                            <artifactId>license-maven-config</artifactId>
+                            <version>0.0.1</version>
+                        </dependency>
+                    </dependencies>
 
-                <configuration>
-                    <header>com/mycila/maven/plugin/license/templates/AllRightsReserved.txt</header>
-                    <properties>
-                        <owner>${owner.name}</owner>
-                        <email>${owner.email}</email>
-                    </properties>
-                </configuration>
-                <executions>
-                    <execution>
-                        <goals>
-                            <goal>check</goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>
-        </plugins>
-     </build>
-</project>     
+                    <configuration>
+                        <header>com/mycila/maven/plugin/license/templates/AllRightsReserved.txt</header>
+                        <properties>
+                            <owner>${owner.name}</owner>
+                            <email>${owner.email}</email>
+                        </properties>
+                    </configuration>
+                    <executions>
+                        <execution>
+                            <goals>
+                                <goal>check</goal>
+                            </goals>
+                        </execution>
+                    </executions>
+                </plugin>
+            </plugins>
+         </build>
+    </project>     
