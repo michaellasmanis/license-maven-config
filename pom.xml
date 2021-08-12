@@ -40,7 +40,7 @@
         <lasmanis-maven-tiles.version>0.0.105</lasmanis-maven-tiles.version>
     </properties>
 
-    <url>${baseurl}/${project.artifactId}</url>
+    <url>${baseurl}</url>
 
     <scm>
         <connection>${scmBase.connection}/${project.artifactId}</connection>
