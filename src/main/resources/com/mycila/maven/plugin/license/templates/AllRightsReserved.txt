@@ -1,0 +1,3 @@
+${project.name}
+
+Copyright © ${year} ${owner} All Rights Reserved.
