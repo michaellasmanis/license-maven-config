@@ -34,7 +34,7 @@ Example configuration for the License Maven Plugin in the (parent) pom of the pr
                     </dependencies>
 
                     <configuration>
-                        <header>com/mycila/maven/plugin/license/templates/AllRightsReserved.txt</header>
+                        <header>com/lasmanis/maven/license-maven-config/templates/AllRightsReserved.txt</header>
                         <properties>
                             <owner>${owner.name}</owner>
                             <email>${owner.email}</email>
