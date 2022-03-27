@@ -33,8 +33,8 @@
         <revision>0.0</revision>
         <changelist>0-SNAPSHOT</changelist>
         <repository.name>license-maven-config</repository.name>
-        <tiles-maven.version>2.23</tiles-maven.version>
-        <lasmanis-maven-tiles.version>0.0.115</lasmanis-maven-tiles.version>
+        <tiles-maven.version>2.27</tiles-maven.version>
+        <lasmanis-maven-tiles.version>0.0.125</lasmanis-maven-tiles.version>
     </properties>
 
     <url>${baseurl}</url>
