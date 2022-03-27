@@ -23,7 +23,7 @@ under the License.
     <link>${baseurl}</link>
     <description>Maven License Plugin Configuration - Checkstyle report</description>
     <language>en-us</language>
-    <copyright>&#169;2021 Michael Lasmanis</copyright>
+    <copyright>&#169;2021 - 2022 Michael Lasmanis</copyright>
     <item>
       <title>File: 0,
              Errors: 0,
